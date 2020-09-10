@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <navbar>
+        <img src="Eios_name.jpg" >
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Cart</span>
+                </li>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <span>Inbox</span>
+                </li>
+                <li>
+                    <img src="profile_pic.jpg" alt="">
+                </li>
+            </ul>
+        </nav>
+    </navbar>
+    <main>
+        <div class="row">
+            <div class="col-sm">
+                <div class="slider-card">
+                    <div class="slider">
+                        <img src="slider4.jpg">
+                    </div>
+                    <div class="slider">
+                        <img src="slider5.jpg">
+                    </div>
+                    <div class="slider">
+                        <img src="slider6.jpg">
+                    </div>
+                    <i class="prev fa fa-angle-left" onclick="plusSlides(-1)"></i>
+                    <i class="next fa fa-angle-right" onclick="plusSlides(1)"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var slideIndex=1;
+        showSlides(slideIndex);
+
+        function plusSlides(n){showSlides(slideIndex+=n);
+        }
+        function showSlides(n){
+            var slides=document.getElementsByClassName("slider");
+            if (n>slides.length){slideIndex=1}
+                if (n<1){slideIndex=slides.length}
+                for(i=0; i<slides.length;i++){
+                    slides[i].style.display="none";
+                }
+                slides[slideIndex-1].style.display="block";
+                dots[slideIndex-1].className+="active";
+        }
+    </script>
+</body>
+</html>
